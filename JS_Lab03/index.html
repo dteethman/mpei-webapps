@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3</title>
+</head>
+<body>
+    <script>
+        function joinArray(a) {
+            return a.join(', ')
+        }
+
+        var array = ['Cherry Pie', 'Ice Cream', 'Cinnabon', 'Donut', 'Cookies']
+        var sortedArray = array.slice().sort()
+        var reversedArray = array.slice().reverse()
+        var sortedByLenArray = array.slice().sort((a, b) => a.length - b.length) 
+
+        alert(`Default: ${joinArray(array)}\nSorted A to Z: ${joinArray(sortedArray)}\nReversed: ${joinArray(reversedArray)}\nSorted by length: ${joinArray(sortedByLenArray)}`)
+    </script>
+
+    <input type="button" onclick="alert(joinArray(array))" value="Show default">
+    <input type="button" onclick="alert(joinArray(sortedArray))" value="Show sorted by ABC">
+    <input type="button" onclick="alert(joinArray(reversedArray))" value="Show reversed">
+    <input type="button" onclick="alert(joinArray(sortedByLenArray))" value="Show sorted by length">
+</body>
+</html>
